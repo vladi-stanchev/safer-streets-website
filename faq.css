@@ -1,0 +1,55 @@
+.content-cc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* checkbox tgg-title*/
+input.tgg-title {
+    appearance: unset;
+    all: unset;
+}
+
+.faq-accordion-title label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.faq-accordion-title span {
+    margin-left: auto;
+    transition: transform 0.4s ease-in-out;
+}
+
+/* FAQ card: main content */
+/*================================================*/
+
+.faq-accordion-content {
+    color: var(--neutral-soft-color);
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.4s ease-in-out;
+    padding: 0 20px;
+}
+
+/* Effects */
+/*================================================*/
+
+/* main title, accordion title effects */
+
+.faq-accordion-title:hover h3 {
+    color: #332b3e;
+    transition: 0.7s;
+}
+
+.faq-accordion .tgg-title:checked + div > label > span {
+    will-change: transform;
+    transform: rotate(180deg);
+}
+
+/* main content, accordion text effect */
+
+.faq-accordion .tgg-title:checked ~ .faq-accordion-content {
+    will-change: max-height;
+    max-height: 350px;
+}
